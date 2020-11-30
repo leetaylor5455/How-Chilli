@@ -1,0 +1,114 @@
+@import 'colours.scss';
+
+html, body, #root, .App {
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'Bungee';
+    src: url('./fonts/BungeeShade.ttf');
+}
+
+@font-face {
+    font-family: 'Taco';
+    src: url('./fonts/Taco.otf');
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('./fonts/RobotoSlab.ttf');
+}
+
+body {
+    font-family: 'Taco';
+    background-color: $darkBlue;
+    color: $light;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .text {
+        display: flex;
+        font-size: 8vw;
+        overflow: hidden;
+    }
+
+    .highlight-text {
+        font-family: 'Bungee';
+        font-size: 10vw;
+        padding: 1rem;
+        // transform: translateY(-20px);
+        text-shadow: 0px 10px 8px black;
+        overflow: hidden;
+    }
+}
+
+main {
+    .content {
+        position: relative;
+        padding: 2rem;
+
+        .info {
+            font-size: 8vw;
+            font-family: 'Taco';
+            position: absolute;
+            max-width: 60vw;
+            z-index: 10;
+        }
+
+        .part-1 {
+            position: relative;
+
+            img {
+                margin-right: -15vw;
+            }
+
+            p {
+               position: absolute;
+               left: 0; 
+            }
+        }
+
+        .part-2 {
+            position: relative;
+
+            img {
+                margin-left: -15vw;
+            }
+
+            p {
+                text-align: right;
+                position: absolute;
+                right: 0;
+            }
+        }
+
+        .table-title {
+            display: inline-block;
+            font-family: 'Roboto Slab';
+            font-size: 6vw;
+            border-bottom: 2px solid $light;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: 'Roboto Slab';
+            font-size: 6vw;
+
+            th {
+                text-align: left;
+                font-weight: normal;
+            }
+
+            table, td, th {
+                border: 1px solid $light;
+                padding: 1rem;
+              }
+        }
+    }
+}
