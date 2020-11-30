@@ -68,7 +68,7 @@ export default async function generateText(currentTemp, laterTemp) {
             part1 = 'It\'s a fucking massive chilli,and it\'s frozen!';
             break;
         default:
-            console.log('Something went wrong.')
+            console.error('Something went wrong.')
 
     }
 
@@ -94,7 +94,7 @@ export default async function generateText(currentTemp, laterTemp) {
             part2 = `there's gonna be ${aOrAnother} huge frozen chilli later!!`;
             break;
         default:
-            console.log('Something went wrong.');
+            console.error('Something went wrong.');
     }
 
     current.sentence = part1;

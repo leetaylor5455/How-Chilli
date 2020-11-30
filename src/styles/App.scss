@@ -3,6 +3,7 @@
 html, body, #root, .App {
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -49,6 +50,11 @@ header {
 
 main {
     .content {
+
+        img {
+            -webkit-filter: drop-shadow( 4px 4px 3px rgba(0, 0, 0, .7));
+            filter: drop-shadow( 4px 4px 3px rgba(0, 0, 0, .7));
+        }
         position: relative;
         padding: 2rem;
 
@@ -95,10 +101,13 @@ main {
         }
 
         table {
-            border-collapse: collapse;
             width: 100%;
             font-family: 'Roboto Slab';
             font-size: 6vw;
+            border-collapse: collapse;
+            border-radius: 5px;
+            border-style: hidden; /* hide standard table (collapsed) border */
+            box-shadow: 0 0 0 1px $light; /* this draws the table border  */ 
 
             th {
                 text-align: left;
@@ -108,7 +117,11 @@ main {
             table, td, th {
                 border: 1px solid $light;
                 padding: 1rem;
-              }
+            }
+
+            td {
+                border: 1px solid $light;
+            }
         }
     }
 }

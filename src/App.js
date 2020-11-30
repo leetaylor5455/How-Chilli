@@ -70,16 +70,16 @@ function App() {
           part.imgScale = 0;
           break;
         case 2: // lil chilli
-          part.imgScale = .33;
+          part.imgScale = .4;
           break;
         case 3: // chilli
-          part.imgScale = .66;
+          part.imgScale = .8;
           break;
         case 4: // big chilli
           part.imgScale = 1
           break;
         default:
-          part.imgScale = 1.33;
+          part.imgScale = 1.2;
           break;
       }
     });
@@ -99,7 +99,7 @@ function App() {
     const populate = async () => {
       const weatherData = await fetchData();
       setWeatherData(weatherData);
-      const sentenceData = await generateText(weatherData.current.temp, weatherData.later.temp);
+      const sentenceData = await generateText(weatherData.current.feelsLike, weatherData.later.feelsLike);
       // return data;
       setWeatherParts(sentenceData);
 
@@ -189,23 +189,25 @@ function App() {
             initial={{scale: 0}}
             animate={part2TextControls} // last animated part
           >
-            <h1 className='table-title'>Here's the <s>unnecessary</s> data</h1>
+            <h1 className='table-title'>Here's the <s>unnecessary</s> stuff</h1>
             <table>
-              <tr>
-                <th></th>
-                <th>Temp</th>
-                <th>Feels Like</th>
-              </tr>
-              <tr>
-                <td>Now</td>
-                <td>{Math.round(weatherData.current.temp)}°</td>
-                <td>{Math.round(weatherData.current.feelsLike)}°</td>
-              </tr>
-              <tr>
-                <td>{laterTime}</td>
-                <td>{Math.round(weatherData.later.temp)}°</td>
-                <td>{Math.round(weatherData.later.feelsLike)}°</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <th></th>
+                  <th>Temp</th>
+                  <th>Feels Like</th>
+                </tr>
+                <tr>
+                  <td>Now</td>
+                  <td>{Math.round(weatherData.current.temp)}°</td>
+                  <td>{Math.round(weatherData.current.feelsLike)}°</td>
+                </tr>
+                <tr>
+                  <td>{laterTime}</td>
+                  <td>{Math.round(weatherData.later.temp)}°</td>
+                  <td>{Math.round(weatherData.later.feelsLike)}°</td>
+                </tr>
+              </tbody>
             </table>
           </motion.div>
           
