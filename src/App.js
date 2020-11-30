@@ -76,10 +76,10 @@ function App() {
           part.imgScale = .8;
           break;
         case 4: // big chilli
-          part.imgScale = 1
+          part.imgScale = 1.1
           break;
         default:
-          part.imgScale = 1.2;
+          part.imgScale = 1.3;
           break;
       }
     });

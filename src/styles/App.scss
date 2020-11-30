@@ -42,8 +42,9 @@ header {
         font-family: 'Bungee';
         font-size: 10vw;
         padding: 1rem;
+        color: $lightRed;
         // transform: translateY(-20px);
-        text-shadow: 0px 10px 8px black;
+        text-shadow: 0px 0px 40px $strongRed;
         overflow: hidden;
     }
 }
@@ -52,8 +53,8 @@ main {
     .content {
 
         img {
-            -webkit-filter: drop-shadow( 4px 4px 3px rgba(0, 0, 0, .7));
-            filter: drop-shadow( 4px 4px 3px rgba(0, 0, 0, .7));
+            -webkit-filter: drop-shadow( 4px 4px 8px rgba(0, 0, 0, .6));
+            filter: drop-shadow( 4px 4px 8px rgba(0, 0, 0, .6));
         }
         position: relative;
         padding: 2rem;
@@ -64,13 +65,18 @@ main {
             position: absolute;
             max-width: 60vw;
             z-index: 10;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         }
 
         .part-1 {
             position: relative;
 
+            .info {
+                margin-top: 7vh;
+            }
+
             img {
-                margin-right: -15vw;
+                margin-right: -10vw;
             }
 
             p {
@@ -98,6 +104,7 @@ main {
             font-family: 'Roboto Slab';
             font-size: 6vw;
             border-bottom: 2px solid $light;
+            margin-top: 10vh;
         }
 
         table {
